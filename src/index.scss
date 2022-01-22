@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  outline: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #eee;
+
+  margin: 50px;
+}
+
+.container {
+  max-width: 1440px;
+  min-width: 375px;
+}
+
+.commentContainer {
+  max-width: 1440px;
+  min-width: 375px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  .counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 30px;
+    font-size: 16px;
+    background-color: hsl(223, 19%, 93%);
+    border-radius: 10px;
+    span {
+      color: hsl(238, 40%, 52%);
+    }
+    button {
+      width: 16px;
+      height: 16px;
+      background: none;
+      font-size: 16px;
+      color:  hsl(211, 10%, 45%);
+      cursor: pointer;
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    .mainTop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      .user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          margin-right: -5px;
+        }
+        p {
+          font-weight: bold;
+          color:  hsl(238, 40%, 52%);
+        }
+        span {
+          color: hsl(240, 3%, 78%);
+        }
+      }
+      .events {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        color: hsl(238, 40%, 52%);
+        font-weight: bold;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+        }
+      }
+    }
+    .mainBottom {
+      font-size: 16px;
+      color: hsl(211, 10%, 45%);
+      overflow: auto;
+      .edit {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        height: 100px;
+        .text {
+          width: 100%;
+          height: 90px;
+          border: 1px solid rgb(14, 14, 14);
+          padding: 5px 10px;
+          color: hsl(238, 40%, 52%);
+          border-radius: 5px;
+          color: hsl(211, 10%, 45%);;
+        }
+        button {
+          width: 80px;
+          height: 60px;
+          margin-top: 10px;
+          background: hsl(238, 40%, 52%);
+          color: white;
+          font-weight: bold;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+      p {
+        display : block; 
+        overflow-wrap: anywhere;
+        max-width : 100%;
+        span {
+          color: hsl(238, 40%, 52%);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.addComment {
+  max-width: 1440px;
+  min-width: 375px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+  padding: 20px 30px;
+  gap: 20px;
+  height: 150px;
+  margin: 20px 0;
+  border-radius: 10px;
+  .user {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  .text {
+    border: 1px solid #eee;
+    flex: 1;
+    height: 100%;
+    padding: 10px 20px;
+    color: hsl(211, 10%, 45%);
+  }
+  .sendBtn {
+    width: 70px;
+    height: 50px;
+    background: hsl(238, 40%, 52%);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+}
+.replyCommentContainer {
+  max-width: 1440px;
+  min-width: 375px;
+  
+  .list {
+    width: calc(100% - 10px);
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+    margin-left: auto;
+    .commentContainer, .replyCommentContainer {
+      min-width: calc(100% - 10px);
+    }
+  }
+}
